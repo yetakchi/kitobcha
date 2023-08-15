@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitob betlarini hosil qilish dasturi</title>
+    <link rel="icon" href="./rasmlar/kitob.svg">
+    <link rel="stylesheet" href="uslublar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="description" content="Kitob betlarini sahifalash">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Kitob, Kitobcha, Betlash, Sahiflash">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kitobcha.joriy.uz">
+    <meta property="og:site_name" content="Kitobcha">
+    <meta name="google-site-verification" content="">
+    <meta name="author" content="Zaripboyev Anvar">
+</head>
+
+<body>
+    <div class="quti sirt">
+        <div class="tepa">
+            <div class="qism">
+                <div class="belgi">
+                    <img src="./rasmlar/kitob.svg">
+                </div>
+                <div class="sarlavha">Kitob sahifalari</div>
+                <div class="amallar">
+                    <i class="fa fa-minus"></i>
+                    <i class="far fa-clone"></i>
+                    <i class="fa fa-times"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="kiruvchi">
+            <div class="tugmalar">
+                <button id="chiqar" class="chiqar">
+                    <img src="./rasmlar/printer.svg">
+                    Yaratish
+                </button>
+            </div>
+            <div class="matnlar">
+                <div class="matn">
+                    <label class="varaqlar varaq_b" for="kirish"> Sahifalashning <br> boshlanish soni</label>
+                    <input type="text" id="boshi" class="boshi">
+                    <label class="varaqlar varaq_o" for="kirish"> Sahifalashning <br> tugash soni </label>
+                    <input type="text" id="oxiri" class="oxiri">
+                </div>
+                <div class="tanlovlar">
+                    <div class="shakl">Shakli</div>
+                    <div class="tanlagich">
+                        <input type="radio" name="shakl" id="kitob" checked value="1">
+                        <label for="kitob" class="kitob"> Kitob shaklida </label>
+                        <div id="shart" class="shart">
+                            <i class="fa fa-exclamation-triangle" style="font-size: 14px; color: #fc3636;"></i>
+                            Eslatma: Kitobcha shakliga keltirish uchun sahifalar soni to&#8216;trga bo&#8216;linadigan
+                            bo&#8216;lishi shart!
+                        </div>
+                    </div>
+                    <div class="tanlagich">
+                        <input type="radio" name="shakl" id="ikki-tomonli" value="2">
+                        <label for="ikki-tomonli" class="ikki-tomonli"> Ikki tomonlama </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chiquvchi">
+            <div class="maydon">
+                <label for="matn">Old tomoni</label>
+                <textarea id="old" name="matn" cols="30" rows="4" class="matn"></textarea>
+            </div>
+            <div class="maydon">
+                <label for="matn">Orqa tomoni</label>
+                <textarea id="orqa" name="matn" cols="30" rows="4" class="matn"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="hodisa.js"></script>
+</body>
+
+</html>
