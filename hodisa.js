@@ -22,7 +22,6 @@ let x, y;
 
 
 /**
- * @param
  * @author Anvar Zaripboyev
  * Chiquvchi maydonlarni tozalash
  */
@@ -34,7 +33,7 @@ function maydonniTozala() {
 function tekshir(qiymat, qaytaAloqa) {
     for (let i = 0; i < qiymat.length; i++) {
         if (qiymat[i] >= '0' && qiymat[i] <= '9') {
-            continue;
+
         } else {
             qaytaAloqa();
             break;
@@ -58,15 +57,15 @@ function shaklKitobcha(b, t) {
         a[i] = (b + i) - 1;
     }
 
-    if (m % 4 == 0) {
+    if (m % 4 === 0) {
         let son = m / 4;
 
         for (let i = m; i >= 1; i--) {
-            if (i % 2 == 0) {
+            if (i % 2 === 0) {
                 if (son > 0) {
-                    old.value += (a[i] + "," + (a[m - i + 1]) + (m / 2 + 2 == i ? "" : ","));
+                    old.value += (a[i] + "," + (a[m - i + 1]) + (m / 2 + 2 === i ? "" : ","));
                 } else {
-                    orqa.value += (a[i] + "," + (a[m - i + 1]) + (i == 2 ? "" : ","));
+                    orqa.value += (a[i] + "," + (a[m - i + 1]) + (i === 2 ? "" : ","));
                 }
                 son--;
             }
@@ -88,12 +87,12 @@ function shaklIkkiTomonlama(b, t) {
     // m - Markaz
     let m = t - b + 1;
 
-    if (m % 2 == 0) {
+    if (m % 2 === 0) {
         for (let i = b; i <= t; i += 2) {
-            old.value += (i + (i == t - 1 ? "" : ","));
+            old.value += (i + (i === t - 1 ? "" : ","));
         }
         for (let i = t; i >= b; i -= 2) {
-            orqa.value += (i + (i == b + 1 ? "" : ","));
+            orqa.value += (i + (i === b + 1 ? "" : ","));
         }
     } else {
         alert("Sahifalar soni juft bo\u2018lishi kerak!");
@@ -104,11 +103,11 @@ function shaklIkkiTomonlama(b, t) {
 kitob.onchange = maydonniTozala;
 ikkiTomonlama.onchange = maydonniTozala;
 
-boshi.addEventListener("keyup", function (keyboardEvent ) {
+boshi.addEventListener("keyup", function(keyboardEvent) {
     var input = keyboardEvent.target;
     let qiymat = input.value;
     let son = true;
-    tekshir(qiymat, function () {
+    tekshir(qiymat, function() {
         son = false;
         alert("Faqat raqam kiriting");
     });
@@ -120,11 +119,11 @@ boshi.addEventListener("keyup", function (keyboardEvent ) {
     maydonniTozala();
 });
 
-oxiri.addEventListener("keyup", function (keyboardEvent ) {
+oxiri.addEventListener("keyup", keyboardEvent => {
     var input = keyboardEvent.target;
     let qiymat = input.value;
     let son = true;
-    tekshir(qiymat, function () {
+    tekshir(qiymat, function() {
         son = false;
         alert("Faqat raqam kiriting");
     });
@@ -136,7 +135,7 @@ oxiri.addEventListener("keyup", function (keyboardEvent ) {
     maydonniTozala();
 });
 
-chiqar.onclick = function () {
+chiqar.onclick = function() {
     maydonniTozala();
 
     if (x * y > 0) {
@@ -151,7 +150,3 @@ chiqar.onclick = function () {
         alert("Ma\u2019lumot kiritlmagan!");
     }
 }
-
-
-
-
