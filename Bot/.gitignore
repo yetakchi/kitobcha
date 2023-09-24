@@ -1,0 +1,10 @@
+.idea
+/target
+/.DS_store
+
+# Environment
+.env
+.env.local
+
+# database
+database.db
