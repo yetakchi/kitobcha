@@ -21,8 +21,8 @@ body {
 
 .sirt {
     background-color: #f1f1f1;
+    width: 25%;
     height: 500px;
-    width: 480px;
     border-radius: 5px;
 }
 
@@ -146,11 +146,11 @@ body {
 
 .kiruvchi .tanlovlar {
     position: relative;
-    text-align: left;
-    border: 1.1px solid blue;
     width: 350px;
-    padding: 35px 0;
     margin: 5px 0;
+    border: 1.1px solid blue;
+    padding: 35px 0;
+    text-align: left;
     user-select: none;
 }
 
