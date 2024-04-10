@@ -1,29 +1,38 @@
 * {
-    text-decoration: none;
-    box-sizing: border-box;
-    padding: 0;
     margin: 0;
-    font-family: 'Times New Roman', Times, serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    height: 100%;
     width: 100%;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+a, button, input, textarea {
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .quti {
     position: relative;
+    width: 90%;
     text-align: center;
     justify-content: center;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .sirt {
-    background-color: #f1f1f1;
-    width: 25%;
-    height: 500px;
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
     border-radius: 5px;
+    background-color: #f1f1f1;
 }
 
 .tepa * {
@@ -36,6 +45,7 @@ body {
     position: relative;
     align-items: center;
     justify-items: center;
+    justify-content: space-between;
     padding: 5px 10px 10px;
     border-radius: 5px 5px 0 0;
     background-color: #00ffff;
@@ -56,8 +66,8 @@ body {
 
 .qism .belgi>img {
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
@@ -65,18 +75,18 @@ body {
 .qism .sarlavha {
     display: inline-block;
     position: relative;
+    margin: 0 auto;
     text-align: center;
     transform: translateX(20%);
-    margin: 0 auto;
     pointer-events: none;
 }
 
 .qism .amallar {
     position: relative;
     display: inline-block;
-    font-size: large;
-    padding-right: 0;
     margin-right: -2px;
+    padding-right: 0;
+    font-size: large;
 }
 
 .qism .amallar i {
@@ -92,8 +102,10 @@ body {
 .kiruvchi {
     display: flex;
     position: relative;
-    align-items: center;
+    margin: 0 15px;
     margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .kiruvchi * {
@@ -101,47 +113,41 @@ body {
     outline: none;
 }
 
-.kiruvchi .matn {
-    display: inline-block;
-    position: relative;
-    text-align: left;
-    left: 50px;
-    margin-top: 10px;
+.matnlar {
+    margin-left: 10px;
 }
 
-.kiruvchi .matn input[type="text"] {
+.matnlar .matn {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.kiruvchi .matn .ustun {
+    display: flex;
+    align-items: center;
+}
+
+.kiruvchi .matn input[type="number"] {
     width: 60px;
     margin: 10px 0;
-    margin-bottom: 20px;
-    border: 1px solid #a9a9a9;
+    margin-left: 5px;
     padding: 0 8px;
+    border: 1px solid #a9a9a9;
     text-align: center;
 }
 
-.kiruvchi .matn input[type="text"]:focus {
+.kiruvchi .matn input[type="number"]:focus {
     border-color: #e59700;
 }
 
-.kiruvchi .matn #boshi {
-    margin-right: 120px;
-}
-
 .varaqlar {
-    position: absolute;
     font-size: 15px;
     line-height: 14px;
-    bottom: 20px;
     pointer-events: none;
     user-select: none;
-}
-
-.varaqlar.varaq_b {
-    left: -100px;
-
-}
-
-.varaqlar.varaq_o {
-    margin-left: -95px;
 }
 
 .kiruvchi .tanlovlar {
@@ -183,15 +189,12 @@ body {
 }
 
 .kiruvchi .tugmalar .chiqar {
-    cursor: pointer;
-    height: 156px;
-    margin: 0 5px;
+    height: 135px;
     margin-top: 5px;
     padding: 5px;
-    margin-left: 10px;
-    margin-right: 15px;
-    user-select: none;
     border: 1px solid #a9a9a9;
+    user-select: none;
+    cursor: pointer;
     transition: border-color 0.8s;
 }
 
@@ -199,16 +202,17 @@ body {
     border-color: #000000;
 }
 
-.kiruvchi .tanlovlar .shart {
-    position: absolute;
+.shart {
+    width: 78%;
+    margin-left: auto;
+    margin-right: 0;
+    /* opacity: 0; */
     font-size: 14px;
-    margin-top: 40px;
     line-height: 15px;
-    opacity: 0;
     transition: opacity 0.5s;
 }
 
-#kitob:checked~.shart {
+#kitob:checked~ .shart {
     opacity: 1;
 }
 
@@ -217,24 +221,90 @@ body {
     position: relative;
     text-align: left;
     justify-content: left;
-    margin-left: 10px;
-    margin-top: 20px;
+    margin: 0px 15px;
 }
 
-.chiquvchi * {
+.chiquvchi .nishon {
     font-size: 18px;
-    outline: none;
+}
+
+.chiquvchi .maydon {
+    position: relative;
 }
 
 .chiquvchi textarea {
     position: relative;
-    width: 450px;
+    width: 100%;
     height: 100px;
-    resize: none;
     margin-bottom: 5px;
     margin-top: 2px;
+    resize: none;
+    font-size: 18px;
+    outline: none;
     border: 1px solid #767676;
     border-radius: 2px;
     padding-left: 5px;
     padding-top: 5px;
+}
+
+.chiquvchi .natija {
+    border-width: 1.3px;
+    border-radius: 5px;
+    border-color: #a9a9a9;
+}
+
+.nusxalagich {
+    position: absolute;
+    top: 32px;
+    right: 8px;
+    cursor: pointer;
+    transition: linear .9s;
+}
+
+/* New styles */
+.past {
+    position: fixed;
+    width: 480px;
+    bottom: 10px;
+    left: 50%;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    transform: translateX(-50%);
+}
+
+.past a {
+    color: #207DE8;
+}
+
+@media screen and (max-width: 540px) {
+    .sirt {
+        width: 90%;
+    }
+
+    .kiruvchi .tanlovlar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .qism .sarlavha {
+        transform: translateX(10%);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .kiruvchi .tanlovlar {
+        padding: 15px;
+    }
+
+    .kiruvchi .tugmalar .chiqar {
+        height: 165px;
+    }
+
+    .shart {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+    }
 }

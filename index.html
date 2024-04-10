@@ -21,7 +21,7 @@
     <meta name="author" content="Zaripboyev Anvar">
     <link rel="icon" href="/rasmlar/book.png">
     <link rel="stylesheet" href="css/uslublar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="search" type="application/opensearchdescription+xml" title="Kitobcha" href="/opensearch.xml">
 </head>
 <body>
@@ -44,26 +44,25 @@
             <div class="tugmalar">
                 <button id="chiqar" class="chiqar">
                     <img src="./rasmlar/printer.svg" alt="Betlash">
-                    Yaratish
+                    <span>Yaratish</span>
                 </button>
             </div>
             <div class="matnlar">
                 <div class="matn">
-                    <label class="varaqlar varaq_b" for="boshi"> Sahifalashning <br> boshlanish soni</label>
-                    <input type="text" id="boshi" class="boshi">
-                    <label class="varaqlar varaq_o" for="oxiri"> Sahifalashning <br> tugash soni </label>
-                    <input type="text" id="oxiri" class="oxiri">
+                    <div class="ustun">
+                        <label class="varaqlar" for="boshi">Sahifalashning <br> boshlanish soni</label>
+                        <input type="number" id="boshi" class="betlar boshi">
+                    </div>
+                    <div class="ustun">
+                        <label class="varaqlar" for="oxiri">Sahifalashning <br> tugash soni</label>
+                        <input type="number" id="oxiri" class="betlar oxiri">
+                    </div>
                 </div>
                 <div class="tanlovlar">
                     <div class="shakl">Shakli</div>
                     <div class="tanlagich">
                         <input type="radio" name="shakl" id="kitob" checked value="1">
                         <label for="kitob" class="kitob">Kitob shaklida</label>
-                        <div id="shart" class="shart">
-                            <i class="fa fa-exclamation-triangle" style="font-size: 14px; color: #fc3636;"></i>
-                            Eslatma: Kitobcha shakliga keltirish uchun sahifalar soni to&#8216;trga bo&#8216;linadigan
-                            bo&#8216;lishi shart!
-                        </div>
                     </div>
                     <div class="tanlagich">
                         <input type="radio" name="shakl" id="ikki-tomonli" value="2">
@@ -72,16 +71,34 @@
                 </div>
             </div>
         </div>
+        <div id="shart" class="shart">
+            <i class="fa fa-exclamation-triangle" style="font-size: 14px; color: #fc3636;"></i>
+            Eslatma: Kitobcha shakliga keltirish uchun sahifalar soni to&#8216;trga bo&#8216;linadigan
+            bo&#8216;lishi shart!
+        </div>
 
         <div class="chiquvchi">
             <div class="maydon">
-                <label for="old">Old tomoni</label>
-                <textarea id="old" name="old" cols="30" rows="4" class="matn"></textarea>
+                <label for="old" class="nishon">Old tomoni</label>
+                <textarea id="old" name="old" cols="30" rows="4" class="natija"></textarea>
+                <i class="far fa-copy nusxalagich" title="Nusxalash" onclick="nusxala(this, old)" onmouseleave="boshqa(this)"></i>
             </div>
             <div class="maydon">
-                <label for="orqa">Orqa tomoni</label>
-                <textarea id="orqa" name="orqa" cols="30" rows="4" class="matn"></textarea>
+                <label for="orqa" class="nishon">Orqa tomoni</label>
+                <textarea id="orqa" name="orqa" cols="30" rows="4" class="natija"></textarea>
+                <i class="far fa-copy nusxalagich" title="Nusxalash" onclick="nusxala(this, orqa)" onmouseleave="boshqa(this)"></i>
             </div>
+        </div>
+    </div>
+
+    <footer class="quti">
+        <div class="past">
+            <p>
+                Mualliflik huquqi &copy; 2017-2024 <a href="mailto:anvarindastries@gmail.com">Anvar Zaripboyev</a>.
+            </p>
+            <p>
+                Taklif va murojaatlar qa&#8217;bul qilinadi!
+            </p>
         </div>
     </div>
 

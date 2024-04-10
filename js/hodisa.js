@@ -1,3 +1,7 @@
+/**
+ * @author Anvar Zaripboyev
+ */
+
 const chiqar = document.querySelector("#chiqar");
 const boshi = document.getElementById("boshi");
 const oxiri = document.getElementById("oxiri");
@@ -22,7 +26,6 @@ let x, y;
 
 
 /**
- * @author Anvar Zaripboyev
  * Chiquvchi maydonlarni tozalash
  */
 function maydonniTozala() {
@@ -31,14 +34,20 @@ function maydonniTozala() {
 }
 
 function tekshir(qiymat, qaytaAloqa) {
-    for (let i = 0; i < qiymat.length; i++) {
-        if (qiymat[i] >= '0' && qiymat[i] <= '9') {
-
-        } else {
-            qaytaAloqa();
-            break;
-        }
+    if (qiymat > Math.E ** 10) {
+        qaytaAloqa();
     }
+}
+
+function nusxala(tugma, maydon) {
+    // Nusxalash
+    navigator.clipboard.writeText(maydon.value);
+
+    tugma.classList.replace("far", "fas");
+}
+
+function boshqa(tugma) {
+    tugma.classList.replace("fas", "far");
 }
 
 /**
@@ -103,11 +112,11 @@ function shaklIkkiTomonlama(b, t) {
 kitob.onchange = maydonniTozala;
 ikkiTomonlama.onchange = maydonniTozala;
 
-boshi.addEventListener("keyup", function(keyboardEvent) {
+boshi.addEventListener("keyup", function (keyboardEvent) {
     var input = keyboardEvent.target;
     let qiymat = input.value;
     let son = true;
-    tekshir(qiymat, function() {
+    tekshir(qiymat, function () {
         son = false;
         alert("Faqat raqam kiriting");
     });
@@ -123,7 +132,7 @@ oxiri.addEventListener("keyup", keyboardEvent => {
     var input = keyboardEvent.target;
     let qiymat = input.value;
     let son = true;
-    tekshir(qiymat, function() {
+    tekshir(qiymat, function () {
         son = false;
         alert("Faqat raqam kiriting");
     });
@@ -135,7 +144,7 @@ oxiri.addEventListener("keyup", keyboardEvent => {
     maydonniTozala();
 });
 
-chiqar.onclick = function() {
+chiqar.onclick = function () {
     maydonniTozala();
 
     if (x * y > 0) {
