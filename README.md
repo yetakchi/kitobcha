@@ -5,8 +5,8 @@ Kitob betlarini sahifalash uchun oddiy dastur!
 
 
 ## Imkoniyatlari
-* Kiritilsan sahifalarga mos ravishta kitobcha uchun sahifalar juftligini hosil qilish
-* Ikki tomonlama (Oldi-Orqa) shaklida sahifalar juftligini hosil qilish
+* Kiritilgan sahifalarga mos ravishda kitobcha uchun sahifalar juftligini hosil qilish
+* Ikki tomonlama (Oldi-orqa) shaklida sahifalar juftligini hosil qilish
 
 ## Foydalanilgan manbalar:
 * [Scheme](https://en.wikipedia.org/wiki/Schema.org) - Scheme is a classic programming language in the Lisp family.
@@ -18,4 +18,4 @@ Kitob betlarini sahifalash uchun oddiy dastur!
 * [XML-sitemaps](https://www.xml-sitemaps.com/) Just enter your website URL to create a sitemap
 
 ## Havolalar
-* [Kitobcha](https://kitobcha.joriy.uz/) - Ishlatish uchun
+* [Kitobcha](https://kitobcha.joriy.uz/) - Ishlatish uchun (mahsulot talqini)
