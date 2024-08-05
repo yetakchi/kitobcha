@@ -1,0 +1,3 @@
+[submodule "kitobcha-bot"]
+	path = kitobcha-bot
+	url = https://github.com/fidokor/kitobcha-bot.git
