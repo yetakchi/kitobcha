@@ -19,3 +19,7 @@ Kitob betlarini sahifalash uchun oddiy dastur!
 
 ## Havolalar
 * [Kitobcha](https://kitobcha.joriy.uz/) - Ishlatish uchun (mahsulot talqini)
+
+
+## Muammolar
+- [Submodule](https://stackoverflow.com/questions/36554810/how-to-link-folder-from-a-git-repo-to-another-repo)
